@@ -1,0 +1,360 @@
+body {
+    font-family : 'brandon_text_regular';
+}
+
+ui-view {
+
+    &.ng-enter {
+        animation: fadeIn 0.5s ease;
+    }
+}
+
+.d-btn {
+	border-radius: 25px;
+	padding: 1em 1em;
+	font-size: 1em;
+	outline: none;
+	border: none;
+	background-color: $yellow;
+	cursor: pointer;
+
+	&--pink {
+		background-color: $pink;
+	}
+}
+
+
+.d-section {
+	height: auto;
+	display: flex;
+	padding: $section-padding;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+
+	@media screen and (min-width: $small-screen) {
+		min-height: $section-height-large;
+	}
+
+	&--column {
+		flex-direction: column;
+	}
+
+	&--no-padding {
+		padding: 0em;
+	}
+	&__title {
+		color: $navy;
+		font-size: 2.5em;
+		margin: 0em;
+	}
+	&__separator {
+		margin: 2em auto 0em;
+		height: 5px;
+		width: 30px;
+		background-color: $navy;
+
+		&--blue {
+			background-color: $blue;
+		}
+	}
+	&__text-medium {
+		font-size: 1.5em;
+	}
+}
+
+.section-video {
+	flex-direction: column;
+}
+
+.section-what {
+	padding: 0em;
+
+	@media screen and (max-width: $small-screen) {
+		flex-direction:column;
+    }
+
+	&__left-side {
+		background-color: $green;
+		flex-basis: 65%;
+		padding: $section-padding;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex;
+
+		&__body-text {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			text-align: left;
+			color: white;
+			width: 100%;
+			max-width: 600px;
+			margin: auto;
+			line-height: 2em;
+		}
+	}
+	&__right-side {
+		flex-basis: 35%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+		background-image: url('http://placehold.it/400x400');
+		background-size: cover;
+		background-position: center;
+
+		&__iphone-img {
+			height: auto;
+			max-height: 100%;
+			max-width: 100%;
+			padding-top: 1em;
+		}
+	}
+}
+
+
+.section-how {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	color: $white;
+	background-color: $navy;
+
+	&__header {
+
+	}
+	&__steps {
+		display: flex;
+		justify-content: space-around;
+
+		&__item {
+			margin: 0em 2em;
+			flex-basis: 25%;
+			width: 25%;
+
+			&__number {
+				font-size: 3em;
+				display: block;
+				margin-bottom: 1.5em;
+			}
+			&__text {
+				line-height: $p-line-height;
+			}
+		}
+	}
+	&__cta {
+		.d-btn {
+			margin-top: 1em;
+		}
+	}
+}
+
+.section-geofilters {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+
+	&__header {
+
+	}
+	&__geofilters {
+		&__carousel {
+			width: 100%;
+			max-width: $max-width-container;
+			margin: auto;
+			display: flex;
+			justify-content: space-between;
+
+			&__item {
+				flex-basis: 20%;
+				width: 20%;
+				height: 200px;
+				margin-right: 1em;
+				background-image: url('http://placehold.it/200x400');
+				background-size: cover;
+
+				&--last {
+					margin-right: 0em;
+				}
+			}
+		}
+		&__indicators {
+
+		}
+	}
+}
+
+.section-reviews {
+	color: $white;
+	padding: 0em;
+
+	&__left-side {
+		width: 35%;
+		flex-basis: 35%;
+		justify-content: flex-end;
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    padding: $section-padding;
+	    background-image: url('http://placehold.it/400x400');
+		background-size: cover;
+		background-position: center;
+
+		&__iphone-img {
+
+		}
+	}
+	&__right-side {
+		background-color: $blue;
+		width: 65%;
+		flex-basis: 65%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+
+		&__header {
+			img {
+				margin-bottom: 1em;
+			}
+		}
+
+		&__reviews {
+			text-align: left;
+			width: 100%;
+			max-width: 600px;
+			margin: auto;
+			line-height: $p-line-height;
+
+			&__text {
+				margin-top: 4em;
+				display: block;
+			}
+			&__author-img {
+				display: inline-block;
+				margin-right: 0.5em;
+			}
+			&__author-text {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+
+.section-pricing {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+
+	&__header {
+
+	}
+	&__plans {
+		display: flex;
+		justify-content: space-between;
+		max-width: $max-width-container;
+		width: 100%;
+		margin: auto;
+
+		&__item {
+			border-radius: 25px;
+			flex-basis: 30%;
+			margin-right: 5%;
+			border: 10px dotted $navy;
+			padding: 1.5em 1em;
+
+			&__recommended {
+				margin-bottom: 20px;
+			}
+			&__price {
+				margin-bottom: 40px;
+				font-size: 3em;
+
+				&__dolar-sign {
+					font-size: 0.2em;
+				}
+			}
+			&__include {
+				margin-bottom: 20px;
+			}
+			&__body {
+				line-height: $p-line-height;
+				margin-bottom: 40px;
+			}
+			&__cta {
+				button {
+					width: 100%;
+					color: $white;
+					background-color: $green;
+				}
+				&--middle {
+					button {
+						background-color: $blue;
+					}
+				}
+			}
+
+			&--middle {
+				color: $white;
+				background-color: $navy;
+			}
+
+			&--last {
+				margin-right: 0em;
+				border-color: $blue;
+			}
+		}
+	}
+}
+
+
+.section-faq {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	background-color: $green;
+	color: $white;
+
+	&__header {
+
+	}
+	&__body {
+		width: 100%;
+		margin: auto;
+		max-width: $max-width-container-large;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		&__item {
+			margin: 60px auto;
+			text-align: left;
+			flex-basis: 40%;
+
+			&__question {
+				font-weight: bold;
+				margin-bottom: 20px;
+			}
+			&__answer {
+				line-height: $p-line-height;
+			}
+		}
+	}
+}
+
+
+.section-last {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: auto;
+	padding: $section-padding;
+
+	&__header {
+		margin-bottom: 40px;
+	}
+
+	&__body {
+	}
+}

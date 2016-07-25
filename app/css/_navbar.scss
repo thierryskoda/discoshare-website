@@ -1,0 +1,53 @@
+.d-navbar {
+	position: absolute;
+	top: 50px;
+	width: 100%;
+	display: flex;
+	padding: 0em 1em;
+	align-items: center;
+	height: 50px;
+
+	&__left-side {
+		flex-basis: 60%;
+		max-width: 250px;
+
+		&__logo {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	&__right-side {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		flex: 1;
+
+		&__menu-item {
+			display: none;
+			cursor: pointer;
+			color: white;
+			margin: 1em;
+			margin-right: 1em;
+
+			&--last {
+				margin-right: 0em;
+			}
+
+			&--cta {
+
+			}
+
+			@media screen and (min-width: $small-screen) {
+				display: flex;
+			}
+		}
+
+		&__mobile-button {
+
+			@media screen and (min-width: $small-screen) {
+				display: none;
+			}
+		}
+	}
+}
